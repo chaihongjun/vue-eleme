@@ -1,9 +1,9 @@
 /*
  * @Author: ChaiHongJun
  * @Date: 2019-12-03 09:40:13
- * @LastEditTime: 2019-12-03 16:13:46
+ * @LastEditTime: 2019-12-03 17:29:09
  * @LastEditors: ChaiHongJun
- * @Description: 头部文件注释
+ * @Description:  封装axios 异步请求
  */
 import axios from "ts-axios-new";
 
