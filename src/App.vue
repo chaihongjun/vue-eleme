@@ -1,7 +1,7 @@
 <!--
  * @Author: ChaiHongJun
  * @Date: 2019-12-03 09:40:13
- * @LastEditTime: 2019-12-03 16:56:04
+ * @LastEditTime: 2019-12-04 17:58:54
  * @LastEditors: ChaiHongJun
  * @Description: 头部文件注释
  -->
@@ -60,10 +60,10 @@ export default {
   },
   created() {
     this._getSeller();
-    // console.log(this.seller.id);
   },
   methods: {
     _getSeller() {
+      //  发起异步请求  商家信息数据 seller
       getSeller({
         id: this.seller.id
       }).then(seller => {

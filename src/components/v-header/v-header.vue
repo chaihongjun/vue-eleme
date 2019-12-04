@@ -2,15 +2,22 @@
   <!-- 点击显示店铺详细信息 -->
   <div class="header" @click="showDetail">
     <div class="content-wrapper">
+      <!-- 店铺头像  -->
       <div class="avatar">
+        <!-- 店铺logo -->
         <img width="64" height="64" :src="seller.avatar" />
       </div>
       <div class="content">
         <div class="title">
+          <!-- 品牌 -->
           <span class="brand"></span>
+          <!-- 店铺名称 -->
           <span class="name">{{seller.name}}</span>
         </div>
+        <!-- 配送能力 -->
         <div class="description">{{seller.description}}/{{seller.deliveryTime}}分钟送达</div>
+
+        <!-- 优惠 -->
         <div v-if="seller.supports" class="support">
           <support-ico :size="1" :type="seller.supports[1].type"></support-ico>
           <span class="text">{{seller.supports[1].description}}</span>
@@ -21,11 +28,15 @@
         <i class="icon-keyboard_arrow_right"></i>
       </div>
     </div>
+    <!-- 公告板 -->
     <div class="bulletin-wrapper">
+      <!-- 公告板图标 -->
       <span class="bulletin-title"></span>
+      <!-- 公告内容 -->
       <span class="bulletin-text">{{seller.bulletin}}</span>
       <i class="icon-keyboard_arrow_right"></i>
     </div>
+    <!-- 头部背景图 -->
     <div class="background">
       <img :src="seller.avatar" width="100%" height="100%" />
     </div>
@@ -36,6 +47,7 @@ import SupportIco from "components/support-ico/support-ico";
 export default {
   name: "v-header",
   props: {
+    // 父组件App.vue 传递商家信息
     seller: {
       type: Object,
       default() {
@@ -46,8 +58,8 @@ export default {
   methods: {
     showDetail() {
       /*
-       *            https://www.kancloud.cn/cooldrw2015/vue_2/1055113#CreateApi__1
-       *           调用 组件  headerDetail
+       *   https://www.kancloud.cn/cooldrw2015/vue_2/1055113#CreateApi__1
+       *    调用 组件  headerDetail
        */
       this.headerDetailComp =
         this.headerDetailComp ||
