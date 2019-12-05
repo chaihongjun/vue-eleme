@@ -1,7 +1,7 @@
 <!--
  * @Author: ChaiHongJun
  * @Date: 2019-12-03 09:40:13
- * @LastEditTime: 2019-12-04 17:58:54
+ * @LastEditTime: 2019-12-05 10:42:49
  * @LastEditors: ChaiHongJun
  * @Description: 头部文件注释
  -->
@@ -9,6 +9,7 @@
   <div id="app" @touchmove.prevent>
     <v-header :seller="seller"></v-header>
     <div class="tab-wrapper">
+      <!-- tabs传入选项卡数据 -->
       <tab :tabs="tabs"></tab>
     </div>
   </div>
@@ -37,6 +38,7 @@ export default {
         {
           label: "商品",
           component: Goods,
+          icon: "cubeic-mall",
           data: {
             seller: this.seller
           }
@@ -44,6 +46,7 @@ export default {
         {
           label: "评论",
           component: Ratings,
+          icon: "cubeic-edit",
           data: {
             seller: this.seller
           }
@@ -51,6 +54,7 @@ export default {
         {
           label: "商家",
           component: Seller,
+          icon: "cubeic-home",
           data: {
             seller: this.seller
           }
